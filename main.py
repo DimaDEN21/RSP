@@ -12,72 +12,78 @@ list=[":rock:", ":roll_of_paper:", ":scissors:"]
 @bot.event
 
 
-
 async def on_message(message):
-    if message.content.startswith("🪨"):
+    if message.content.startswith("Rules"):
+        print("I","You can use :rock: :roll_of_paper: :scissors:","\nTipe one of this emoji")
+
+        await message.channel.send("You can use :rock: :roll_of_paper: :scissors:")
+        await message.channel.send("Copy one of this emoji or write    \n:/rock:     :/roll_of_paper:     :/scissors:    (but without /)")
+
+
+
+    elif message.content.startswith("🪨"):
         randuns = random.choice(list)
-        print("Я",randuns,"Игрок :rock:")
+        print("I",randuns,"Player :rock:")
         await message.channel.send(randuns)
 
         if randuns == ":scissors:":
-            await message.channel.send("Вы выиграли")
+            await message.channel.send("You Win")
+            print("I","You Win")
 
         elif randuns == ":roll_of_paper:":
-            await message.channel.send("Я выиграл")
+            await message.channel.send("I Win")
+            print("I","I Win")
 
         elif randuns == ":rock:":
-            await message.channel.send("Ничья")
-
+            await message.channel.send("A Draw")
+            print("I","A Draw")
 
 
     elif message.content.startswith("🧻"):
         randuns = random.choice(list)
-        print("Я", randuns, "Игрок :roll_of_paper:")
+        print("I", randuns, "Player :roll_of_paper:")
         await message.channel.send(randuns)
 
         if randuns == ":scissors:":
-            await message.channel.send("Я выиграл")
-            print("Я",":scissors:","Я выиграл")
+            await message.channel.send("I Win")
+            print("I","I Win")
 
         elif randuns == ":roll_of_paper:":
-            await message.channel.send("Ничья")
-            print("Я",":roll_of_paper:","Ничья")
+            await message.channel.send("A Draw")
+            print("I","A Draw")
 
         elif randuns == ":rock:":
-            await message.channel.send("Вы выиграли")
-            print("Я",":rock:","Вы выиграли")
+            await message.channel.send("You Win")
+            print("I","You Win")
 
 
 
 
     elif message.content.startswith("✂"):
         randuns = random.choice(list)
-        print("Я", randuns, "Игрок :scissors:")
+        print("I", randuns, "Player :scissors:")
         await message.channel.send(randuns)
 
         if randuns==":scissors:":
-            await message.channel.send("Ничья")
+            await message.channel.send("A Draw")
+            print("I","A Draw")
 
         elif randuns==":roll_of_paper:":
-            await message.channel.send("Вы выиграли")
+            await message.channel.send("You Win")
+            print("I","You Win")
 
         elif randuns==":rock:":
-            await message.channel.send("Я выиграл")
+            await message.channel.send("I Win")
+            print("I","I Win")
 
 
-    elif message.content.startswith("💀"):
-        await message.channel.send("https://tenor.com/view/skull-skull-emoji-sus-smile-gif-25113334")
-    elif message.content.startswith("база"):
-        await message.channel.send("https://www.youtube.com/watch?v=mLVws70GYtg&ab_channel=DiscardPixelhttps://www.youtube.com/watch?v=mLVws70GYtg&ab_channel=DiscardPixel")
-    elif message.content.startswith("мега база"):
-        await message.channel.send("https://www.youtube.com/watch?v=ptgj9rrZokQ&ab_channel=Chinozo")
-    elif message.content.startswith("F"):
-        await message.channel.send(file=discord.File('Yoriichi.mp4'))
+    elif message.content.startswith("Boobs"):
+        await message.channel.send("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+    elif message.content.startswith("Nah"):
+        await message.channel.send(file=discord.File('When The New Friend Fights an Iron Golem.mp4'))
 
 
 
-
-
-bot.run('MTA3MDQzNDUxOTU2MTI3NzYzMQ.GO2-UU.yBG1lgVHkOlrSeTLIlB3_GQSOhp2LCXGXfn9rA')
+bot.run('MTIwNTE3NzEyMzE1NzgzNTg1Ng.GBxcVy.m72-O2bnxuFjcUY7AlOoIySO7kZVH7ILh1zdHo')
 
 
